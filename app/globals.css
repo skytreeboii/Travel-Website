@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 13% 18%;
+    --foreground: 45 100% 95%;
+
+    --card: 220 13% 25%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 220 13% 25%;
+    --popover-foreground: 45 100% 95%;
+
+    --primary: 45 100% 70%;
+    --primary-foreground: 220 13% 18%;
+
+    --secondary: 220 13% 35%;
+    --secondary-foreground: 45 100% 95%;
+
+    --muted: 220 13% 35%;
+    --muted-foreground: 45 20% 75%;
+
+    --accent: 220 13% 35%;
+    --accent-foreground: 45 100% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 100% 95%;
+
+    --border: 220 13% 35%;
+    --input: 220 13% 35%;
+    --ring: 45 100% 70%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    background-image: radial-gradient(circle at 25% 25%, hsl(45, 100%, 70%, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 75% 75%, hsl(30, 50%, 50%, 0.1) 0%, transparent 50%);
+  }
+}
+
+@layer components {
+  .luxury-card {
+    @apply bg-card/80 backdrop-blur-sm border border-luxury-gold/20 shadow-2xl;
+  }
+
+  .luxury-button {
+    @apply bg-luxury-gradient hover:shadow-lg hover:shadow-luxury-gold/25 transition-all duration-300;
+  }
+
+  .luxury-text-gradient {
+    @apply bg-luxury-gradient bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    @apply bg-background/80 backdrop-blur-md border border-luxury-gold/20;
+  }
+}
